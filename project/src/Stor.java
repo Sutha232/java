@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
-public class Story {
+public class Stor {
     public static void main(String[] args) {
         Exchange menu = new Exchange();
-        double ex = 0;
+        double ex = 0; // ค่าเงิน + เริ่มต้น
         menu.choosetype();
+        // ใช้ Scanner ในการรับค่า
 
         Scanner sc = new Scanner(System.in);
         int x = 1;
-        while (x == 1) {
+        while (x == 1) { // ues loop while ในการวนซ้ำ
             System.out.print("Please choose option : ");
             int exchange = sc.nextInt();
             switch (exchange) {
@@ -17,11 +18,11 @@ public class Story {
                 double usd = sc.nextDouble();
                 if (usd >= 0) {
                     double bath = usd * 32;
-                    System.out.println("");
+                    System.out.println(""); // หลังจากรับค่ามาแล้วนำค่ามา * เพื่อคำนวนหาผลลัพธ์
                     System.out.println(usd + " USD is " + bath + " Bath");
                     System.out.println("");
                     ex = ex + bath;
-
+                    // ex เป็นตัวแปรใช้ในการเก็บค่า
                 } else {
                     System.out.println("Please put in positive number of USD");
                 }
